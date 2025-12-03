@@ -1,0 +1,15 @@
+<header>
+    <h1>PokéDex</h1>
+    <p>Enciclopedia Pokemon Completa</p>
+
+    <nav>
+        <ul>
+          <li><a href="/">Todos</a></li>
+          <% tipos.forEach(tipo => { %>
+            <li><a href="/tipos/<%= tipo %>"><%= tipo %></a></li>
+          <% }) %>
+        </ul>
+      </nav>
+      
+
+</header>

@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Home</title>
 </head>
 <body>
+
+ <%- include('partials/header') %>
+
+  <main>
+
+    <h2>Pokémon Registrados</h2>
+
+  <div class="contenedor">
+    <% pokemon.forEach(p => { %>
+      <a href="/pokemon/<%= p.id %>" class="tarjeta">
+        <img src="<%= p.imagen %>" alt="<%= p.nombre %>">
+        <p><%= p.numero %></p>
+        <h3 class="titulo-tarjeta"><%= p.nombre %></h3>
+        
+      </a>
+    <% }); %>
+  </div>
+
+  </main>
+
+  <%- include('partials/footer') %>
+
   
 </body>
 </html>
